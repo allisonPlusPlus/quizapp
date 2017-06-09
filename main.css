@@ -4,7 +4,8 @@
   position:relative;
   margin:8% auto auto auto;
   width:750px;
-  padding:40px 50px;
+  padding-top: 10px;
+  padding-bottom: 15px;
   display:table;
  }
 
@@ -13,3 +14,8 @@
    margin-left: auto;
    margin-right: auto;
  }
+
+.moth {
+  height: auto;
+  width: 150px;
+}
