@@ -39,8 +39,8 @@ var questions = {
 };
 
 function questionCount(gameState) {
-  console.log(gameState);
-console.log("success!");
+ gameState.questionCount += 1;
+  console.log(gameState.questionCount);
 }
 
 
