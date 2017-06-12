@@ -29,5 +29,8 @@
 
 .gamelink:hover {
   text-decoration: none;
-  color: red;
+}
+
+#submit-next {
+  margin-bottom: 10px;
 }
