@@ -1,3 +1,12 @@
+var gameState = {
+  questions: [],
+  correctAnswers: 0,
+  questionCount: 0,
+};
+
+
+
+
 var questions = {
     Q1: {
         question: "Which woman was the lead software engineer on the Apollo?",
@@ -18,7 +27,7 @@ var questions = {
     },
 
     Q4: {
-      question: "Which woman was not portrayed in the movie Hidden Figures?",
+      question: "Which woman was NOT portrayed in the movie Hidden Figures?",
       answer: "Grace Hopper",
       choices: ["Dorothy Vaughan", "Grace Hopper",  "Mary Jackson",  "Katherine Johnson"]
     },
