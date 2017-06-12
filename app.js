@@ -41,15 +41,16 @@ function questionCount(gameState) {
  gameState.questionCount += 1;
 }
 
-function initiateGame(questions) {
+function initiateGame(questions, gameState) {
   $(".question").html(questions.Q1.question);
   $(".a").html(questions.Q1.choices[0]);
   $(".b").html(questions.Q1.choices[1]);
   $(".c").html(questions.Q1.choices[2]);
   $(".d").html(questions.Q1.choices[3]);
+  $(".answer-tally").html(gameState.questionCount);
 }
 
-initiateGame(questions);
+initiateGame(questions, gameState);
 
 function formSubmit() {
 $("#submit-next").submit(function(event) {
