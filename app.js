@@ -43,6 +43,10 @@ function questionCount(gameState) {
 
 function initiateGame(questions) {
   $(".question").html(questions.Q1.question);
+  $(".a").html(questions.Q1.choices[0]);
+  $(".b").html(questions.Q1.choices[1]);
+  $(".c").html(questions.Q1.choices[2]);
+  $(".d").html(questions.Q1.choices[3]);
 }
 
 initiateGame(questions);
