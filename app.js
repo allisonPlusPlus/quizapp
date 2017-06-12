@@ -5,8 +5,6 @@ var gameState = {
 };
 
 
-
-
 var questions = {
     Q1: {
         question: "Which woman was the lead software engineer on the Apollo?",
@@ -39,3 +37,16 @@ var questions = {
     },
 
 };
+
+function formSubmit() {
+$('.submit-next').submit(function(event) {
+  event.preventDefault();
+  // addItems(state, $('#shopping-list-entry').val());
+  // buildList(state);
+
+});
+}
+
+$(function() {
+  formSubmit();
+});
