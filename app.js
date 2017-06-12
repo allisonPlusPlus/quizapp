@@ -38,13 +38,17 @@ var questions = {
 
 };
 
-function formSubmit() {
-$('.submit-next').submit(function(event) {
-  event.preventDefault();
-  // addItems(state, $('#shopping-list-entry').val());
-  // buildList(state);
+function questionCount(gameState) {
+  console.log(gameState);
+console.log("success!");
+}
 
+
+function formSubmit() {
+$("#submit-next").submit(function(event) {
+  event.preventDefault();
 });
+questionCount(gameState);
 }
 
 $(function() {
