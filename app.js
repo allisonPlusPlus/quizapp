@@ -4,7 +4,6 @@ var gameState = {
   questionCount: 0,
 };
 
-
 var questions = {
     Q1: {
         question: "Which woman was the lead software engineer on the Apollo?",
@@ -40,9 +39,13 @@ var questions = {
 
 function questionCount(gameState) {
  gameState.questionCount += 1;
-  console.log(gameState.questionCount);
 }
 
+function initiateGame(questions) {
+  $(".question").html(questions.Q1.question);
+}
+
+initiateGame(questions);
 
 function formSubmit() {
 $("#submit-next").submit(function(event) {
