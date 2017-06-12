@@ -18,10 +18,15 @@ var questions = {
     },
 
     Q4: {
-      question: "Which mathematician was not portrayed in the movie Hidden Figures?",
+      question: "Which woman was not portrayed in the movie Hidden Figures?",
       answer: "Grace Hopper",
       choices: ["Dorothy Vaughan", "Grace Hopper",  "Mary Jackson",  "Katherine Johnson"]
     },
 
+    Q5: {
+      question: "Which woman computer scientist, electrical engineer, inventor is also a transgender activist?",
+      answer: "Lynn Conway",
+      choices: ["Lynn Conway", "Mary Jackson", "Anita Borg", "Radia Perman"]
+    },
 
 };
