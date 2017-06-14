@@ -76,15 +76,24 @@ console.log(gameState.currentChoice);
 console.log(currentQuestion.answer);
 if (gameState.currentChoice === currentQuestion.answer) {
   console.log("correct");
+  $(".correct-or-incorrect").html("Correct!").addClass("correct")
+  // $(".buttons").html("<button class='btn btn-default btn-lg center-block' id='next'> Next </button>");
+  // $("#next").on('click', changeQuestion(questions, gameState));
 }
 else {
   console.log("incorrect");
+    $(".correct-or-incorrect").html("Incorrect!").addClass("incorrect")
 }
 
 
   questionCount(gameState);
   changeQuestion(questions, gameState);
 }
+
+function test() {
+  console.log("success!");
+}
+
 
 $(function() {
 
