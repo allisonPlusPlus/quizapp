@@ -79,13 +79,13 @@ function submitAnswer(event) {
   changeQuestion(questions, gameState);
 }
 
-function formSubmit() {
-$("#submit-next").submit(function(event) {
-  event.preventDefault();
-});
-questionCount(gameState);
-}
-
 $(function() {
-  formSubmit();
+
+  $('.list-group-item').on('click', function(event){
+    $('.list-group-item').removeClass('active');
+    $(event.target).addClass('active');
+    gameState.currentChoice = event.target.innerHTML;
+  });
+
+  $('#submit-next').on('click', submitAnswer);
 });
