@@ -65,6 +65,7 @@ function changeQuestion(questions, gameState){
   $(".c").html(currentQuestion.choices[2]);
   $(".d").html(currentQuestion.choices[3]);
   $(".question-number").html(gameState.questionCount);
+  $(".answer-tally").html(gameState.correctAnswers);
 }
 
 
@@ -77,9 +78,9 @@ console.log(currentQuestion.answer);
 if (gameState.currentChoice === currentQuestion.answer) {
   console.log("correct");
   $(".correct-or-incorrect").html("Correct!").addClass("correct").removeClass("incorrect");
-  // $(".buttons").html("<button class='btn btn-default btn-lg center-block' id='next'> Next </button>");
-  // $("#next").on('click', changeQuestion(questions, gameState));
+  updateAnswerTalley(gameState);
 }
+
 else {
   console.log("incorrect");
     $(".correct-or-incorrect").html("Incorrect! The correct answer was " + currentQuestion.answer).addClass("incorrect").removeClass("correct");
@@ -89,6 +90,11 @@ else {
   questionCount(gameState);
   changeQuestion(questions, gameState);
 }
+
+function updateAnswerTalley(gameState) {
+    gameState.correctAnswers += 1;
+}
+
 
 function test() {
   console.log("success!");
