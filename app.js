@@ -68,6 +68,17 @@ function changeQuestion(questions, gameState){
   $(".answer-tally").html(gameState.questionCount);
 }
 
+
+function submitAnswer(event) {
+  // Determine if answer is correct
+
+
+
+
+  questionCount(gameState);
+  changeQuestion(questions, gameState);
+}
+
 function formSubmit() {
 $("#submit-next").submit(function(event) {
   event.preventDefault();
