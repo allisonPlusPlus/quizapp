@@ -65,7 +65,7 @@ function changeQuestion(questions, gameState){
   $(".b").html(currentQuestion.choices[1]);
   $(".c").html(currentQuestion.choices[2]);
   $(".d").html(currentQuestion.choices[3]);
-  $(".answer-tally").html(gameState.questionCount);
+  $(".question-number").html(gameState.questionCount);
 }
 
 
