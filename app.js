@@ -54,6 +54,20 @@ function initiateGame(questions, gameState) {
 
 initiateGame(questions, gameState);
 
+
+
+function changeQuestion(questions, gameState){
+  console.log(gameState.questionCount);
+  var currentSelector = 'Q' + gameState.questionCount;
+  var currentQuestion = questions[currentSelector];
+  $(".question").html(currentQuestion.question);
+  $(".a").html(currentQuestion.choices[0]);
+  $(".b").html(currentQuestion.choices[1]);
+  $(".c").html(currentQuestion.choices[2]);
+  $(".d").html(currentQuestion.choices[3]);
+  $(".answer-tally").html(gameState.questionCount);
+}
+
 function formSubmit() {
 $("#submit-next").submit(function(event) {
   event.preventDefault();
