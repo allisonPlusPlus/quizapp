@@ -57,7 +57,6 @@ initiateGame(questions, gameState);
 
 
 function changeQuestion(questions, gameState){
-  console.log(gameState.questionCount);
   var currentSelector = 'Q' + gameState.questionCount;
   var currentQuestion = questions[currentSelector];
   $(".question").html(currentQuestion.question);
@@ -71,8 +70,16 @@ function changeQuestion(questions, gameState){
 
 function submitAnswer(event) {
   // Determine if answer is correct
-
-
+  var currentSelector = 'Q' + gameState.questionCount;
+  var currentQuestion = questions[currentSelector];
+console.log(gameState.currentChoice);
+console.log(currentQuestion.answer);
+if (gameState.currentChoice === currentQuestion.answer) {
+  console.log("correct");
+}
+else {
+  console.log("incorrect");
+}
 
 
   questionCount(gameState);
