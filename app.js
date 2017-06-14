@@ -2,6 +2,7 @@ var gameState = {
   questions: [],
   correctAnswers: 0,
   questionCount: 0,
+  currentChoice: undefined
 };
 
 var questions = {
