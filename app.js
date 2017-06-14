@@ -49,6 +49,7 @@ function initiateGame(questions, gameState) {
   $(".c").html(questions.Q1.choices[2]);
   $(".d").html(questions.Q1.choices[3]);
   $(".answer-tally").html(gameState.questionCount);
+  questionCount(gameState);
 }
 
 initiateGame(questions, gameState);
