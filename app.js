@@ -73,7 +73,7 @@ function changeQuestion(questions, gameState) {
 }
 
 function showFinalScore() {
-    $(".question").html("Your final score is " + gameState.correctAnswers + " out of 5");
+    $(".question").html("Your final score is <span class='correct'> " + gameState.correctAnswers + "</span> out of 5");
     $(".buttons").html("<a href='game.html'><button class='btn btn-default btn-lg center-block gamelink'> Play Again?</button></a>");
     $(".list-group").hide();
     $(".correct-or-incorrect").hide();
