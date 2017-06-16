@@ -58,6 +58,8 @@ initiateGame(questions, gameState);
 function changeQuestion(questions, gameState){
   var currentSelector = 'Q' + gameState.questionCount;
   var currentQuestion = questions[currentSelector];
+
+  if (gameState.questionCount <= 5) {
   $(".question").html(currentQuestion.question);
   $(".a").html(currentQuestion.choices[0]);
   $(".b").html(currentQuestion.choices[1]);
@@ -65,6 +67,10 @@ function changeQuestion(questions, gameState){
   $(".d").html(currentQuestion.choices[3]);
   $(".question-number").html(gameState.questionCount);
   $(".answer-tally").html(gameState.correctAnswers);
+}
+else {
+  console.log("all done");
+}
 }
 
 
