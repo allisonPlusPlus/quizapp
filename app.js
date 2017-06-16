@@ -56,8 +56,10 @@ initiateGame(questions, gameState);
 
 
 function changeQuestion(questions, gameState){
+
   var currentSelector = 'Q' + gameState.questionCount;
   var currentQuestion = questions[currentSelector];
+
   $(".question").html(currentQuestion.question);
   $(".a").html(currentQuestion.choices[0]);
   $(".b").html(currentQuestion.choices[1]);
@@ -94,6 +96,18 @@ function updateAnswerTalley(gameState) {
     gameState.correctAnswers += 1;
 }
 
+// function showFinalScore() {
+//   $(".question").html("Your final score is " + gameState.correctAnswers + " out of 5");
+//   $(".buttons").html("<a href='game.html'><button class='btn btn-default btn-lg center-block'> Play Again?</button></a>");
+//   $(".list-group").hide();
+//   $(".correct-or-incorrect").hide();
+//   $(".answer-tally").hide();
+//   $(".question-number").hide();
+//   $(".questions").hide();
+//   $(".answers").hide();
+// }
+//
+// showFinalScore();
 
 function test() {
   console.log("success!");
