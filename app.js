@@ -56,6 +56,7 @@ initiateGame(questions, gameState);
 
 
 function changeQuestion(questions, gameState) {
+    questionCount(gameState);
     var currentSelector = 'Q' + gameState.questionCount;
     var currentQuestion = questions[currentSelector];
 
@@ -92,21 +93,36 @@ function submitAnswer(event) {
     console.log(gameState.currentChoice);
     console.log(currentQuestion.answer);
     if (gameState.currentChoice === currentQuestion.answer) {
-      
-        $(".correct-or-incorrect").html("Correct!").addClass("correct").removeClass("incorrect");
+
+        $(".correct-or-incorrect").html("Correct!").addClass("correct").removeClass("incorrect").removeClass('hidden');
         updateAnswerTalley(gameState);
-        questionCount(gameState);
         changeQuestion(questions, gameState);
 
 
     } else {
 
-        $(".correct-or-incorrect").html("Incorrect! The correct answer was " + currentQuestion.answer).addClass("incorrect").removeClass("correct");
+
+        incorrectAnswer(currentQuestion);
     }
 
+    // find all elements with .active class\
+    $('.active').removeClass('active');
+    // remove .active from those elements
 
 
 }
+
+function incorrectAnswer(currentQuestion){
+  $(".correct-or-incorrect").html("Incorrect! The correct answer was " + currentQuestion.answer).addClass("incorrect").removeClass("correct");
+  // 0. Hide original answer selections
+  $('.list-group').addClass('hidden');
+  // 2. Hide original submit button
+  $('#submit-next').addClass('hidden');
+  // 3. Display incorrect-submit button
+  $('#submit-incorrect').removeClass('hidden');
+}
+
+
 
 function updateAnswerTalley(gameState) {
     gameState.correctAnswers += 1;
@@ -127,4 +143,11 @@ $(function() {
     });
 
     $('#submit-next').on('click', submitAnswer);
+    $('#submit-incorrect').on('click', function(event){
+      changeQuestion(questions, gameState);
+      $('#submit-next').removeClass('hidden');
+      $('.list-group').removeClass('hidden');
+      $('#submit-incorrect').addClass('hidden');
+      $('.correct-or-incorrect').addClass('hidden');
+    });
 });
