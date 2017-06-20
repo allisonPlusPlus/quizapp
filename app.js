@@ -92,17 +92,20 @@ function submitAnswer(event) {
     console.log(gameState.currentChoice);
     console.log(currentQuestion.answer);
     if (gameState.currentChoice === currentQuestion.answer) {
-        console.log("correct");
+      
         $(".correct-or-incorrect").html("Correct!").addClass("correct").removeClass("incorrect");
         updateAnswerTalley(gameState);
+        questionCount(gameState);
+        changeQuestion(questions, gameState);
+
+
     } else {
-        console.log("incorrect");
+
         $(".correct-or-incorrect").html("Incorrect! The correct answer was " + currentQuestion.answer).addClass("incorrect").removeClass("correct");
     }
 
 
-    questionCount(gameState);
-    changeQuestion(questions, gameState);
+
 }
 
 function updateAnswerTalley(gameState) {
