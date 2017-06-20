@@ -113,7 +113,7 @@ function submitAnswer(event) {
 }
 
 function incorrectAnswer(currentQuestion){
-  $(".correct-or-incorrect").html("Incorrect! The correct answer was " + currentQuestion.answer).addClass("incorrect").removeClass("correct");
+  $(".correct-or-incorrect").html("Incorrect! The correct answer was " + currentQuestion.answer).addClass("incorrect").removeClass("correct").removeClass('hidden');
   // 0. Hide original answer selections
   $('.list-group').addClass('hidden');
   // 2. Hide original submit button
